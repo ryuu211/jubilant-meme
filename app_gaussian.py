@@ -5,7 +5,7 @@ from sklearn.naive_bayes import GaussianNB
 
 st.title("Prediksi Obesitas dengan Gaussian Naive Bayes")
 
-data=pd.read_excel('data_ujian_akhir.xlsx', sheet_name='data_5', engine='openpyxl')
+data=pd.read_excel('data_ujian_akhir.xlsx', engine='openpyxl')
 st.write("Data Training",data.head(50))
 
 x=data.iloc[:,[0,1,2,3]].values
