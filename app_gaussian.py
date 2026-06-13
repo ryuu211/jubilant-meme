@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 
-st.title("Prediksi Obesitas dengan Gaussian Naive Bayes")
+st.title("Prediksi Coimbra Breast Cancer dataset dengan Gaussian Naive Bayes")
 
 data=pd.read_excel('data_ujian_akhir.xlsx', engine='openpyxl')
 st.write("Data Training",data.head(50))
@@ -27,6 +27,6 @@ if prediksi:
     if (y_predik==1):
         st.write("Hasil Prediksi: Normal/Sehat")
     else:
-        st.write("Hasil Prediksi: Obesitas")
+        st.write("Hasil Prediksi: Sakit")
 else:
     st.write("Hasil Prediksi ",0)
