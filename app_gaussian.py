@@ -7,6 +7,8 @@ st.title("Prediksi Coimbra Breast Cancer dataset dengan Gaussian Naive Bayes")
 
 data=pd.read_excel('data_ujian_akhir.xlsx', engine='openpyxl')
 st.write("Data Training",data.head(50))
+st.write("jumlah data tiap kelas: ")
+st.write(data.iloc[:,-1].value_counts())
 
 x=data.iloc[:,[0,1,2,3]].values
 y=data.iloc[:,-1].values
