@@ -11,7 +11,7 @@ st.write("jumlah data tiap kelas: ")
 st.write(data.iloc[:,-1].value_counts())
 hu=data.Age=="39"
 haa=data.Classification=="1"
-st.write(data[(hu) && (haa)])
+st.write(data[(hu) & (haa)])
 
 x=data.iloc[:,[0,1,2,3]].values
 y=data.iloc[:,-1].values
