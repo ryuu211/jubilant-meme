@@ -9,8 +9,9 @@ data=pd.read_excel('data_ujian_akhir.xlsx', engine='openpyxl')
 st.write("Data Training",data.head(50))
 st.write("jumlah data tiap kelas: ")
 st.write(data.iloc[:,-1].value_counts())
-jumlah_usia_39= (data['Age'] == 39).sum()
-st.write("Jumlah data Age dengan Nilai 39: ",jumlah_usia_39)
+hu=data.Age==39
+haa=data.Classification==1
+st.write(data[hu && haa])
 
 x=data.iloc[:,[0,1,2,3]].values
 y=data.iloc[:,-1].values
